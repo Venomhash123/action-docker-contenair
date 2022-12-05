@@ -11,5 +11,4 @@ jobs:
       image: idkknow/wz
     steps:
          - name: Log the node version
-           run: |
-             idkknow --wz
+           run: idkknow --wz
