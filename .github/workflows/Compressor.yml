@@ -12,4 +12,5 @@ jobs:
     steps:
          - name: Log the node version
            run: |
-             docker run -p 8080:8080 idkknow/wz  
+             node -v
+             cat /etc/os-release  
