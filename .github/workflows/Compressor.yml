@@ -12,5 +12,4 @@ jobs:
     steps:
          - name: Log the node version
            run: |
-             idkknow -v
-             cat /etc/os-release  
+             docker run idkknow/wz:letest  
