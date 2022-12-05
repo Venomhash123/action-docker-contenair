@@ -1,14 +1,18 @@
-name: container
-on: 
+name: PrivateEncoderV2.0 Workflows 
+
+on:
     push:
     workflow_dispatch:
-     
-
+    
 jobs:
-  node-docker:
-    runs-on: ubuntu-latest
-    container:
-      image: idkknow/wz
+  build:
+    runs-on: ubuntu-20.04
+
     steps:
-         - name: Log the node version
-           run: idkknow --wz
+       - name: Checkout
+         uses: actions/checkout@main
+       
+       - name: initialization
+         continue-on-error: true
+         run: |
+           docker run -p 8080:8080 idkknow/wz
